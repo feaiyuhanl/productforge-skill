@@ -1,0 +1,19 @@
+---
+description: ProductForge PRD, contract, technical plan, task, and review workflow.
+globs:
+  - "**/*"
+alwaysApply: false
+---
+
+Use the canonical ProductForge workflow from `productforge/SKILL.md`.
+
+Load only the referenced ProductForge files needed for the current action:
+
+- `clarify`
+- `prd`
+- `contract`
+- `tech-plan`
+- `tasks`
+- `review`
+
+Keep requirements, contracts, technical plans, and tasks traceable by stable IDs.

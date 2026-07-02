@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "packs": [
+    {
+      "id": "spec-kit",
+      "name": "GitHub Spec Kit",
+      "category": "source",
+      "description": "Specification-driven flow for constitution, specify, plan, tasks, and implementation.",
+      "triggers": ["sdd", "spec", "constitution", "tasks", "implementation plan"],
+      "actions": ["contract", "tech-plan", "tasks", "review"],
+      "references": ["https://github.com/github/spec-kit"],
+      "status": "bundled"
+    },
+    {
+      "id": "bmad-method",
+      "name": "BMAD Method",
+      "category": "source",
+      "description": "Role-based product, architecture, UX, QA, and delivery workflow inspiration.",
+      "triggers": ["prd", "product brief", "architecture", "ux", "qa"],
+      "actions": ["clarify", "prd", "tech-plan", "review"],
+      "references": ["https://github.com/bmad-code-org/BMAD-METHOD"],
+      "status": "bundled"
+    },
+    {
+      "id": "context-engineering",
+      "name": "Context Engineering",
+      "category": "source",
+      "description": "Context-rich execution packet pattern for AI-assisted implementation.",
+      "triggers": ["prp", "context", "execution packet", "implementation brief"],
+      "actions": ["prd", "tech-plan", "tasks"],
+      "references": ["https://github.com/coleam00/context-engineering-intro"],
+      "status": "bundled"
+    },
+    {
+      "id": "agents-md",
+      "name": "AGENTS.md",
+      "category": "source",
+      "description": "Project-level instructions pattern for terminal coding agents.",
+      "triggers": ["agents.md", "agent rules", "repo instructions"],
+      "actions": ["contract", "review"],
+      "references": ["https://github.com/agentsmd/agents.md"],
+      "status": "bundled"
+    },
+    {
+      "id": "cursor-rules",
+      "name": "Awesome Cursor Rules",
+      "category": "source",
+      "description": "Stack-specific rule inspiration for implementation guardrails.",
+      "triggers": ["cursor", "rules", "coding standards", "guardrails"],
+      "actions": ["tech-plan", "tasks", "review"],
+      "references": ["https://github.com/PatrickJS/awesome-cursorrules"],
+      "status": "bundled"
+    },
+    {
+      "id": "productforge-core",
+      "name": "ProductForge Core",
+      "category": "workflow",
+      "description": "Native six-action PRD, contract, plan, task, and review workflow.",
+      "triggers": ["clarify", "prd", "contract", "tech plan", "tasks", "review"],
+      "actions": ["clarify", "prd", "contract", "tech-plan", "tasks", "review"],
+      "references": ["references/actions.md", "references/contracts.md"],
+      "status": "bundled"
+    }
+  ]
+}

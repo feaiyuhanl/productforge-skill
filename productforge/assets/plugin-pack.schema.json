@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProductForge extension pack",
+  "type": "object",
+  "required": ["id", "name", "category", "description", "triggers", "actions", "references", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{1,62}[a-z0-9]$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "category": {
+      "enum": ["source", "workflow", "template", "adapter"]
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10
+    },
+    "triggers": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "enum": ["clarify", "prd", "contract", "tech-plan", "tasks", "review"]
+      },
+      "minItems": 1
+    },
+    "references": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "status": {
+      "enum": ["bundled", "local", "experimental", "deprecated"]
+    }
+  },
+  "additionalProperties": false
+}
