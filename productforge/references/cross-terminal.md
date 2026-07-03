@@ -8,10 +8,34 @@ Keep `productforge/SKILL.md`, `references/`, `assets/`, and `scripts/` as the ca
 
 ## Codex
 
-Install or copy the `productforge/` folder into a Codex skills directory, then invoke it by name:
+Use ProductForge as a native Codex skill when possible.
+
+Install or copy the `productforge/` folder into a Codex skills directory:
 
 ```text
-Use $productforge to create a PRD and acceptance contracts for this idea: ...
+~/.codex/skills/productforge
+```
+
+On Windows, the equivalent default path is:
+
+```text
+%USERPROFILE%\.codex\skills\productforge
+```
+
+Then invoke it by name:
+
+```text
+Use $productforge to turn this intent into a verifiable product increment: ...
+```
+
+For repository-local usage without global installation, use `adapters/codex/AGENTS.md` as the repo root `AGENTS.md`, or merge its contents into the existing repo instructions.
+
+Codex-specific source of truth:
+
+```text
+productforge/SKILL.md
+productforge/agents/openai.yaml
+adapters/codex/AGENTS.md
 ```
 
 ## Cursor

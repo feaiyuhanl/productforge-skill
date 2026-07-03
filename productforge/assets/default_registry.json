@@ -80,6 +80,16 @@
       "actions": ["learn", "brief", "iterate"],
       "references": ["references/telemetry-and-learning.md"],
       "status": "bundled"
+    },
+    {
+      "id": "codex-adapter",
+      "name": "Codex Adapter",
+      "category": "adapter",
+      "description": "Native Codex skill and AGENTS.md bridge for ProductForge workflows.",
+      "triggers": ["codex", "agents.md", "openai", "skill install", "codex skill"],
+      "actions": ["zero-to-one", "iterate", "scene", "context", "brief", "contract", "tech-plan", "tasks", "review", "evidence", "learn"],
+      "references": ["productforge/SKILL.md", "productforge/agents/openai.yaml", "adapters/codex/AGENTS.md", "references/cross-terminal.md"],
+      "status": "bundled"
     }
   ]
 }

@@ -104,20 +104,49 @@ You can call any action directly:
 | `evidence` | Produce verification and delivery evidence |
 | `learn` | Analyze feedback or telemetry for the next increment |
 
-## Install For Codex
+## Use With Codex
+
+ProductForge supports Codex in two ways.
+
+### Option 1: Native Codex Skill
 
 Copy or symlink the `productforge/` folder into your Codex skills directory.
 
-Then use:
+Windows example:
+
+```powershell
+Copy-Item -Recurse .\productforge "$env:USERPROFILE\.codex\skills\productforge"
+```
+
+macOS/Linux example:
+
+```bash
+cp -R ./productforge ~/.codex/skills/productforge
+```
+
+Then invoke it directly:
 
 ```text
 Use $productforge to turn this intent into a verifiable product increment: ...
 ```
 
-## Use With Cursor Or Claude
+The native Codex entrypoint is `productforge/SKILL.md`; `productforge/agents/openai.yaml` provides UI metadata.
 
-Use the adapter files:
+### Option 2: Project-Level Codex Adapter
 
+If you do not want to install the skill globally, copy `adapters/codex/AGENTS.md` into the target repository root as `AGENTS.md`, or merge its contents into an existing `AGENTS.md`.
+
+Then ask Codex:
+
+```text
+Use the ProductForge workflow in this repository to run a zero-to-one or iterate flow for ...
+```
+
+## Use With Codex, Cursor, Or Claude
+
+Use the adapter files when the target tool does not load Codex skills directly:
+
+- Codex project adapter: `adapters/codex/AGENTS.md`
 - Cursor: `adapters/cursor/productforge.mdc`
 - Claude or other terminal agents: `adapters/claude/CLAUDE.md`
 
@@ -156,6 +185,7 @@ productforge-skill/
       templates/
     scripts/productforge.py
   adapters/
+    codex/AGENTS.md
     cursor/productforge.mdc
     claude/CLAUDE.md
   README.md
@@ -170,6 +200,6 @@ ProductForge borrows workflow ideas from popular open-source AI product and codi
 - BMAD Method: role-based product, architecture, UX, QA, and delivery thinking.
 - Context Engineering: context-rich execution packets and validation loops.
 - AGENTS.md: durable project-level agent instructions.
-- Cursor rules and Claude/Copilot ecosystems: cross-terminal adapter patterns.
+- Codex, Cursor, Claude, and Copilot ecosystems: cross-terminal adapter patterns.
 
 ProductForge's opinionated addition is the **Intent-to-Increment** loop: start with scenes, validate experience through an interactive skeleton, then convert accepted behavior into contracts, implementation, evidence, and learning.
