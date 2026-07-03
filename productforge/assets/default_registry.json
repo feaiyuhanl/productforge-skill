@@ -7,7 +7,7 @@
       "category": "source",
       "description": "Specification-driven flow for constitution, specify, plan, tasks, and implementation.",
       "triggers": ["sdd", "spec", "constitution", "tasks", "implementation plan"],
-      "actions": ["contract", "tech-plan", "tasks", "review"],
+      "actions": ["contract", "tech-plan", "tasks", "review", "evidence"],
       "references": ["https://github.com/github/spec-kit"],
       "status": "bundled"
     },
@@ -16,8 +16,8 @@
       "name": "BMAD Method",
       "category": "source",
       "description": "Role-based product, architecture, UX, QA, and delivery workflow inspiration.",
-      "triggers": ["prd", "product brief", "architecture", "ux", "qa"],
-      "actions": ["clarify", "prd", "tech-plan", "review"],
+      "triggers": ["prd", "product brief", "architecture", "ux", "qa", "scene"],
+      "actions": ["scene", "prd", "tech-plan", "review", "zero-to-one"],
       "references": ["https://github.com/bmad-code-org/BMAD-METHOD"],
       "status": "bundled"
     },
@@ -27,7 +27,7 @@
       "category": "source",
       "description": "Context-rich execution packet pattern for AI-assisted implementation.",
       "triggers": ["prp", "context", "execution packet", "implementation brief"],
-      "actions": ["prd", "tech-plan", "tasks"],
+      "actions": ["context", "brief", "tech-plan", "tasks", "iterate"],
       "references": ["https://github.com/coleam00/context-engineering-intro"],
       "status": "bundled"
     },
@@ -37,7 +37,7 @@
       "category": "source",
       "description": "Project-level instructions pattern for terminal coding agents.",
       "triggers": ["agents.md", "agent rules", "repo instructions"],
-      "actions": ["contract", "review"],
+      "actions": ["context", "contract", "review"],
       "references": ["https://github.com/agentsmd/agents.md"],
       "status": "bundled"
     },
@@ -47,7 +47,7 @@
       "category": "source",
       "description": "Stack-specific rule inspiration for implementation guardrails.",
       "triggers": ["cursor", "rules", "coding standards", "guardrails"],
-      "actions": ["tech-plan", "tasks", "review"],
+      "actions": ["context", "tech-plan", "tasks", "review"],
       "references": ["https://github.com/PatrickJS/awesome-cursorrules"],
       "status": "bundled"
     },
@@ -55,10 +55,30 @@
       "id": "productforge-core",
       "name": "ProductForge Core",
       "category": "workflow",
-      "description": "Native six-action PRD, contract, plan, task, and review workflow.",
-      "triggers": ["clarify", "prd", "contract", "tech plan", "tasks", "review"],
-      "actions": ["clarify", "prd", "contract", "tech-plan", "tasks", "review"],
-      "references": ["references/actions.md", "references/contracts.md"],
+      "description": "Native intent-to-increment workflow for 0-to-1 and continuous iteration.",
+      "triggers": ["intent", "scene", "prototype", "increment", "iteration", "contract", "review"],
+      "actions": ["zero-to-one", "iterate", "scene", "skeleton", "feedback", "context", "brief", "contract", "tech-plan", "tasks", "review", "evidence", "learn"],
+      "references": ["references/actions.md", "references/zero-to-one.md", "references/continuous-iteration.md", "references/contracts.md"],
+      "status": "bundled"
+    },
+    {
+      "id": "interactive-prototype",
+      "name": "Interactive Prototype",
+      "category": "workflow",
+      "description": "Scene-first product skeleton workflow for validating core experience before hardening.",
+      "triggers": ["prototype", "interactive", "skeleton", "0 to 1", "mvp"],
+      "actions": ["zero-to-one", "scene", "skeleton", "feedback"],
+      "references": ["references/interactive-prototype.md", "references/zero-to-one.md"],
+      "status": "bundled"
+    },
+    {
+      "id": "telemetry-learning",
+      "name": "Telemetry Learning",
+      "category": "workflow",
+      "description": "Data and feedback loop for selecting the next product increment.",
+      "triggers": ["analytics", "telemetry", "feedback", "data", "next iteration"],
+      "actions": ["learn", "brief", "iterate"],
+      "references": ["references/telemetry-and-learning.md"],
       "status": "bundled"
     }
   ]

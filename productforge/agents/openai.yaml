@@ -1,7 +1,7 @@
 interface:
   display_name: "ProductForge"
-  short_description: "PRD, SDD contracts, plans, tasks"
-  default_prompt: "Use $productforge to turn this product idea into a PRD, SDD contracts, a technical plan, and implementation tasks."
+  short_description: "Intent to verifiable product increments"
+  default_prompt: "Use $productforge to turn this intent into a scene-first product increment with contracts, implementation plan, and evidence."
 
 policy:
   allow_implicit_invocation: true

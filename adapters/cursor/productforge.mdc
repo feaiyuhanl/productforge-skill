@@ -1,5 +1,5 @@
 ---
-description: ProductForge PRD, contract, technical plan, task, and review workflow.
+description: ProductForge intent-to-increment workflow for 0-to-1 products and existing-project iteration.
 globs:
   - "**/*"
 alwaysApply: false
@@ -9,11 +9,18 @@ Use the canonical ProductForge workflow from `productforge/SKILL.md`.
 
 Load only the referenced ProductForge files needed for the current action:
 
-- `clarify`
-- `prd`
+- `zero-to-one`
+- `iterate`
+- `scene`
+- `skeleton`
+- `feedback`
+- `context`
+- `brief`
 - `contract`
 - `tech-plan`
 - `tasks`
 - `review`
+- `evidence`
+- `learn`
 
-Keep requirements, contracts, technical plans, and tasks traceable by stable IDs.
+Start new-product work from usage scenes, not feature lists. In existing projects, read code before planning. Keep increments, contracts, implementation, and evidence traceable by stable IDs.

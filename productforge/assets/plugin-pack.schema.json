@@ -27,7 +27,23 @@
     "actions": {
       "type": "array",
       "items": {
-        "enum": ["clarify", "prd", "contract", "tech-plan", "tasks", "review"]
+        "enum": [
+          "zero-to-one",
+          "iterate",
+          "scene",
+          "skeleton",
+          "feedback",
+          "context",
+          "brief",
+          "prd",
+          "contract",
+          "tech-plan",
+          "tasks",
+          "review",
+          "evidence",
+          "learn",
+          "clarify"
+        ]
       },
       "minItems": 1
     },

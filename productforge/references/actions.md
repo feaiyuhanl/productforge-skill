@@ -1,139 +1,56 @@
 # ProductForge Actions
 
-Use this file when the task needs one or more ProductForge core actions. Keep action outputs independently useful so users can call one action at a time.
+Use this file to route ProductForge requests. Keep each output small enough to drive the next executable increment.
 
-## 1. clarify
+## Primary Paths
 
-Use `clarify` when the user has a rough idea, scattered notes, or a vague request.
+| Path | Use When | Required References |
+| --- | --- | --- |
+| `zero-to-one` | The user is starting from intent, idea, product direction, or market opportunity | `zero-to-one.md`, `interactive-prototype.md`, optionally `contracts.md` |
+| `iterate` | The user has an existing project and wants a codebase-aware increment | `continuous-iteration.md`, `project-context.md`, `review-gates.md` |
+| `standalone` | The user asks for one artifact or review | The relevant file below |
 
-Process:
+## Zero-To-One Flow
 
-1. Restate the product intent in one sentence.
-2. Extract known facts and hard constraints.
-3. List assumptions that allow progress.
-4. Ask only the questions that would change the product direction, contract, or implementation.
-5. Produce a decision log with default recommendations.
+1. `scene`: define usage scenes, actors, triggers, desired outcome, emotional bar, and constraints.
+2. `skeleton`: create product backbone and smallest interactive prototype that can test the core experience.
+3. `feedback`: capture user judgment, taste, tradeoffs, and experience defects.
+4. `contract`: convert validated experience into acceptance, interface, data, UX, quality, and rollback contracts.
+5. `harden`: add base modules only after the core loop works: auth, persistence, settings, permissions, empty/error states, observability.
+6. `ship`: produce implementation evidence, review findings, risks, and next validation step.
 
-Output sections:
+## Continuous Iteration Flow
 
-- Intent
-- Known Inputs
-- Assumptions
-- Decisions Needed
-- Recommended Defaults
-- Next Artifact
+1. `context`: maintain durable project context, repo rules, architecture notes, data definitions, and AI collaboration constraints.
+2. `brief`: write a short increment brief: problem, constraints, approach, acceptance, evidence.
+3. `read-code`: inspect relevant files before designing changes.
+4. `plan`: produce code-aware implementation steps and risks.
+5. `implement`: make the smallest coherent code change.
+6. `verify`: run tests, static checks, manual checks, and contract validation.
+7. `review`: inspect the diff as a reviewer; lead with bugs and missing tests.
+8. `learn`: analyze usage data, feedback, logs, or telemetry to propose the next brief.
 
-## 2. prd
+## Standalone Actions
 
-Use `prd` when the user wants a Product Requirements Document, product brief, feature spec, or release scope.
+| Action | Output | Template |
+| --- | --- | --- |
+| `scene` | Scene brief | `assets/templates/scene.md` |
+| `skeleton` | Interactive skeleton brief | `assets/templates/skeleton.md` |
+| `feedback` | Experience feedback log | `assets/templates/feedback.md` |
+| `context` | Project context | `assets/templates/project-context.md` |
+| `brief` | Increment brief | `assets/templates/brief.md` |
+| `prd` | Product requirements document, only when explicitly useful | `assets/templates/prd.md` |
+| `contract` | SDD-style contract set | `assets/templates/contract.md` |
+| `tech-plan` | Technical plan | `assets/templates/tech-plan.md` |
+| `tasks` | Sequenced task plan | `assets/templates/tasks.md` |
+| `review` | Readiness or code review | `assets/templates/review.md` |
+| `evidence` | Verification and delivery evidence | `assets/templates/evidence.md` |
+| `learn` | Learning brief for the next increment | `assets/templates/learning.md` |
 
-Process:
+## Backward Compatibility
 
-1. Define problem, target users, goals, non-goals, and success metrics.
-2. Write user stories and jobs-to-be-done.
-3. Define functional requirements with stable IDs such as `REQ-001`.
-4. Capture non-functional constraints that affect engineering.
-5. Mark assumptions, risks, dependencies, and out-of-scope items.
-6. Include launch, analytics, and support requirements when relevant.
+Older ProductForge requests map as follows:
 
-Output sections:
-
-- Summary
-- Problem
-- Users And Use Cases
-- Goals And Metrics
-- Scope
-- Requirements
-- Non-Goals
-- Dependencies
-- Risks
-- Open Questions
-
-## 3. contract
-
-Use `contract` when the user mentions SDD, specification-driven development, acceptance criteria, quality gates, API behavior, data behavior, or implementation contracts.
-
-Process:
-
-1. Convert important behavior into contract IDs such as `CON-001`.
-2. Use Given/When/Then for user-facing behavior.
-3. Define API, data, state, permission, performance, observability, and rollback contracts where relevant.
-4. Link each contract to requirement IDs.
-5. Define verification method: unit, integration, e2e, static check, manual QA, analytics, or operational monitor.
-6. Identify missing contracts that make implementation risky.
-
-Output sections:
-
-- Contract Summary
-- Acceptance Contracts
-- Interface Contracts
-- Data Contracts
-- Quality Gates
-- Verification Matrix
-- Contract Gaps
-
-## 4. tech-plan
-
-Use `tech-plan` when the user needs a technical proposal, architecture plan, implementation approach, migration plan, or engineering RFC.
-
-Process:
-
-1. Start from requirements and contracts, not from favorite technology.
-2. Inspect the current repository before proposing changes when code is available.
-3. Identify affected modules, data flows, interfaces, and operational concerns.
-4. Compare options only when the choice matters.
-5. Pick a recommendation and explain tradeoffs.
-6. Include testing, rollout, migration, and rollback plans.
-
-Output sections:
-
-- Context
-- Requirements Trace
-- Proposed Design
-- Alternatives
-- Implementation Plan
-- Data And Interface Changes
-- Testing Strategy
-- Rollout And Rollback
-- Risks
-
-## 5. tasks
-
-Use `tasks` when the user has enough PRD/contracts/technical plan to start execution.
-
-Process:
-
-1. Split work by dependency order, not by document order.
-2. Keep each task independently reviewable.
-3. Attach requirement IDs and contract IDs to each task.
-4. Include test and documentation tasks where they verify contracts.
-5. Mark blockers, parallelizable work, and acceptance evidence.
-
-Output sections:
-
-- Task Plan
-- Milestones
-- Parallel Work
-- Blockers
-- Acceptance Evidence
-
-## 6. review
-
-Use `review` when the user wants to critique a PRD, contract set, technical plan, task list, or implementation readiness.
-
-Process:
-
-1. Check whether goals, requirements, contracts, and tasks trace to each other.
-2. Identify contradictions, hidden assumptions, vague language, untestable claims, and missing ownership.
-3. Check feasibility against repo constraints and team constraints if available.
-4. Rank issues by severity.
-5. Suggest targeted rewrites or missing artifacts.
-
-Output sections:
-
-- Blocking Issues
-- Important Issues
-- Nice-To-Have Improvements
-- Missing Contracts
-- Traceability Notes
-- Recommended Next Step
+- `clarify` -> `scene` or `brief`, depending on whether the project is new or existing.
+- `prd` -> `scene` plus `contract` for 0-to-1 work, or `brief` for existing projects.
+- `contract`, `tech-plan`, `tasks`, and `review` remain valid standalone actions.

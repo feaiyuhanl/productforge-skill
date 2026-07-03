@@ -16,7 +16,23 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REGISTRY = ROOT / "assets" / "default_registry.json"
 TEMPLATES = ROOT / "assets" / "templates"
 PACK_ID = re.compile(r"^[a-z0-9][a-z0-9-]{1,62}[a-z0-9]$")
-VALID_ACTIONS = {"clarify", "prd", "contract", "tech-plan", "tasks", "review"}
+VALID_ACTIONS = {
+    "zero-to-one",
+    "iterate",
+    "scene",
+    "skeleton",
+    "feedback",
+    "context",
+    "brief",
+    "prd",
+    "contract",
+    "tech-plan",
+    "tasks",
+    "review",
+    "evidence",
+    "learn",
+    "clarify",
+}
 VALID_CATEGORIES = {"source", "workflow", "template", "adapter"}
 VALID_STATUSES = {"bundled", "local", "experimental", "deprecated"}
 

@@ -6,10 +6,10 @@ Use this file when explaining or extending the ProductForge method. ProductForge
 
 | Source | Borrow | ProductForge Mapping |
 | --- | --- | --- |
-| `github/spec-kit` | Constitution, specify, plan, tasks, implementation sequence | `contract`, `tech-plan`, `tasks` |
-| `bmad-code-org/BMAD-METHOD` | Product, architecture, UX, QA role flow | `clarify`, `prd`, `review` |
-| `coleam00/context-engineering-intro` | Product Requirements Prompt and context-rich execution packet | `prd`, `tech-plan`, `tasks` |
-| `agentsmd/agents.md` | Project-level AI agent instructions | `cross-terminal`, repository rules |
+| `github/spec-kit` | Constitution, specify, plan, tasks, implementation sequence | `contract`, `tech-plan`, `tasks`, `evidence` |
+| `bmad-code-org/BMAD-METHOD` | Product, architecture, UX, QA role flow | `scene`, `zero-to-one`, `review` |
+| `coleam00/context-engineering-intro` | Product Requirements Prompt and context-rich execution packet | `context`, `brief`, `iterate` |
+| `agentsmd/agents.md` | Project-level AI agent instructions | `project-context`, repository rules |
 | `PatrickJS/awesome-cursorrules` | Stack-specific coding rules and guardrails | extension packs and repo rules |
 | `hesreallyhim/awesome-claude-code` | Claude Code ecosystem discovery | source discovery only |
 | `github/awesome-copilot` | Cross-agent instructions and workflows | adapter patterns |

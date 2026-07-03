@@ -27,7 +27,7 @@ Use `adapters/claude/CLAUDE.md` as a project instruction bridge. Keep it short a
 Put this sentence in the agent's project instruction file:
 
 ```text
-For product and engineering planning, use the ProductForge workflow from productforge/SKILL.md and load only the referenced files needed for the requested action.
+For product and engineering work, use the ProductForge intent-to-increment workflow from productforge/SKILL.md and load only the referenced files needed for the requested path.
 ```
 
 ## Sync Rule
