@@ -6,7 +6,9 @@ Supported actions:
 
 - `zero-to-one`
 - `iterate`
+- `clarify`
 - `scene`
+- `use-cases`
 - `skeleton`
 - `feedback`
 - `context`
@@ -18,4 +20,4 @@ Supported actions:
 - `evidence`
 - `learn`
 
-Load only the ProductForge references needed for the requested path. Start 0-to-1 work from scenes. In existing projects, read code before planning. Keep increments, contracts, plans, tasks, and evidence traceable by stable IDs.
+Load only the ProductForge references needed for the requested path. Start 0-to-1 work from scenes and use-case closure, not default UI mockups. Choose the smallest MVP artifact before building a skeleton. In existing projects, read code before planning. Keep increments, contracts, plans, tasks, and evidence traceable by stable IDs.

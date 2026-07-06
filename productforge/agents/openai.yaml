@@ -1,7 +1,7 @@
 interface:
   display_name: "ProductForge"
-  short_description: "Intent to verifiable product increments"
-  default_prompt: "Use $productforge to turn this intent into a scene-first product increment with contracts, implementation plan, and evidence."
+  short_description: "Intent to use-case-closed increments"
+  default_prompt: "Use $productforge to turn this intent into a use-case-closed product increment with the right MVP artifact, contracts, implementation plan, and evidence."
 
 policy:
   allow_implicit_invocation: true

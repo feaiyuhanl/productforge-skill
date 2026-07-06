@@ -1,13 +1,33 @@
 # Zero-To-One Plan: $title
 
-## Intent
+## Intent Boundary
 
-## Scenes To Validate
+## Clarifying Assumptions And Questions
+
+| Type | Item | Why It Matters |
+| --- | --- | --- |
+
+## Scenes
 
 | ID | Actor | Situation | Trigger | Desired Outcome |
 | --- | --- | --- | --- | --- |
 
-## Interactive Skeleton
+## Use-Case Closure
+
+| ID | Input | Action | Output | Success Signal | Failure Behavior |
+| --- | --- | --- | --- | --- | --- |
+
+## MVP Capability Map
+
+| Capability | Must Have Now? | Reason | Deferred Wrapper Or Hardening |
+| --- | --- | --- | --- |
+
+## Validation Artifact Choice
+
+| Artifact Type | Why This, Not UI By Default | User Judgment It Enables | Mocked Or Deferred |
+| --- | --- | --- | --- |
+
+## Executable Skeleton
 
 ## Feedback Plan
 

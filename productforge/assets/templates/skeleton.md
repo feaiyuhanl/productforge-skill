@@ -1,10 +1,14 @@
-# Interactive Skeleton: $title
+# MVP Validation Skeleton: $title
 
-## Core Scene
+## Chosen Artifact Type
 
-## Product Backbone
+## Why This Artifact
 
-| Surface | Purpose | Key State | Primary Action |
+## Core Scene And Use Case
+
+## Capability Backbone
+
+| Surface Or Interface | Purpose | Key State | Primary Action |
 | --- | --- | --- | --- |
 
 ## Core Objects
@@ -12,6 +16,8 @@
 ## Primary Flow
 
 ## Mocked Vs Real
+
+## UI Role
 
 ## Feedback Questions
 

@@ -1,6 +1,6 @@
 ---
 name: productforge
-description: Intent-to-increment product engineering workflow for turning human intent into verifiable product increments. Use when Codex needs to design a 0-to-1 product from usage scenes and an interactive skeleton, run continuous iteration in an existing codebase, maintain project context and rules, write short increment briefs, read code before planning, implement and verify changes, review its own work, define SDD-style contracts, or analyze telemetry and feedback for the next iteration.
+description: Intent-to-increment product engineering workflow for turning human intent into verifiable product increments. Use when Codex needs to design a 0-to-1 product from clarified intent, usage scenes, closed use cases, MVP capability maps, and the right validation artifact such as a skill, CLI, API, workflow, or UI; run continuous iteration in an existing codebase; maintain project context and rules; write short increment briefs; read code before planning; implement and verify changes; review its own work; define SDD-style contracts; or analyze telemetry and feedback for the next iteration.
 ---
 
 # ProductForge
@@ -11,7 +11,7 @@ ProductForge turns human intent into verifiable product increments. Use it as a 
 
 First classify the request into one path:
 
-- `zero-to-one`: start from intent, define scenes, build an interactive skeleton, collect feedback, then harden the product.
+- `zero-to-one`: clarify intent, define scenes, close the core use cases, map the MVP capability system, choose the validation artifact, collect feedback, then harden the product.
 - `iterate`: work inside an existing project with durable context, a short increment brief, code reading, implementation, verification, review, and learning.
 - `standalone`: produce or review a specific artifact such as a scene brief, increment brief, contract, technical plan, task plan, evidence report, or learning brief.
 
@@ -20,9 +20,10 @@ For routing details, read `references/actions.md`. For contract-heavy work, read
 ## Operating Rules
 
 - Preserve human agency. Treat the user as owner of intent, judgment, taste, priority, and tradeoff decisions.
-- Let AI own execution acceleration. Convert intent into prototypes, plans, code changes, tests, reviews, and evidence.
-- Start 0-to-1 work from usage scenes, not feature lists.
-- Build the smallest interactive skeleton that can validate the core experience before filling in supporting modules.
+- Let AI own execution acceleration. Convert intent into use cases, prototypes, plans, code changes, tests, reviews, and evidence.
+- Start 0-to-1 work from functional experience and usage scenes, not feature lists or UI screens.
+- Close the smallest use-case loop before choosing an MVP artifact. UI is one possible artifact, not the default constraint.
+- Build the smallest artifact that validates the core experience before filling in supporting modules.
 - In existing projects, maintain durable context and use one short increment brief per iteration.
 - Read repository context and relevant code before proposing implementation changes.
 - Prefer explicit contracts over prose promises. Every important behavior should have an ID, owner surface, acceptance check, and verification method.
@@ -38,10 +39,11 @@ For routing details, read `references/actions.md`. For contract-heavy work, read
 Use only the needed resources:
 
 - `references/actions.md`: router and action map.
-- `references/zero-to-one.md`: scene-first product discovery and interactive skeleton workflow.
+- `references/zero-to-one.md`: functional-experience-first product discovery and MVP validation workflow.
 - `references/continuous-iteration.md`: existing-project iteration workflow.
 - `references/project-context.md`: durable project memory, rules, and AI collaboration context.
-- `references/interactive-prototype.md`: prototype and skeleton expectations.
+- `references/mvp-artifacts.md`: choose the right validation artifact for a skill, CLI, API, workflow, UI, or document-backed product.
+- `references/interactive-prototype.md`: UI prototype expectations; use only after UI is selected as the validation artifact.
 - `references/contracts.md`: contract taxonomy, SDD checks, and traceability rules.
 - `references/telemetry-and-learning.md`: data, feedback, instrumentation, and next-iteration loop.
 - `references/review-gates.md`: implementation, verification, and self-review gates.

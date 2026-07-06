@@ -2,16 +2,22 @@
 
 ## Intent
 
+## Product Type
+
+## Target Actor And Job
+
 ## Known Inputs
+
+## Non-Goals
 
 ## Assumptions
 
 | ID | Assumption | Confidence | Impact If Wrong |
 | --- | --- | --- | --- |
 
-## Decisions Needed
+## Direction-Changing Questions
 
-| ID | Decision | Options | Recommended Default |
+| ID | Question | Why It Matters | Default If Unanswered |
 | --- | --- | --- | --- |
 
 ## Risks

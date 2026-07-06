@@ -12,16 +12,6 @@
       "status": "bundled"
     },
     {
-      "id": "bmad-method",
-      "name": "BMAD Method",
-      "category": "source",
-      "description": "Role-based product, architecture, UX, QA, and delivery workflow inspiration.",
-      "triggers": ["prd", "product brief", "architecture", "ux", "qa", "scene"],
-      "actions": ["scene", "prd", "tech-plan", "review", "zero-to-one"],
-      "references": ["https://github.com/bmad-code-org/BMAD-METHOD"],
-      "status": "bundled"
-    },
-    {
       "id": "context-engineering",
       "name": "Context Engineering",
       "category": "source",
@@ -56,19 +46,29 @@
       "name": "ProductForge Core",
       "category": "workflow",
       "description": "Native intent-to-increment workflow for 0-to-1 and continuous iteration.",
-      "triggers": ["intent", "scene", "prototype", "increment", "iteration", "contract", "review"],
-      "actions": ["zero-to-one", "iterate", "scene", "skeleton", "feedback", "context", "brief", "contract", "tech-plan", "tasks", "review", "evidence", "learn"],
-      "references": ["references/actions.md", "references/zero-to-one.md", "references/continuous-iteration.md", "references/contracts.md"],
+      "triggers": ["intent", "scene", "use case", "mvp", "prototype", "increment", "iteration", "contract", "review"],
+      "actions": ["zero-to-one", "iterate", "clarify", "scene", "use-cases", "skeleton", "feedback", "context", "brief", "contract", "tech-plan", "tasks", "review", "evidence", "learn"],
+      "references": ["references/actions.md", "references/zero-to-one.md", "references/mvp-artifacts.md", "references/continuous-iteration.md", "references/contracts.md"],
       "status": "bundled"
     },
     {
-      "id": "interactive-prototype",
-      "name": "Interactive Prototype",
+      "id": "mvp-artifact-router",
+      "name": "MVP Artifact Router",
       "category": "workflow",
-      "description": "Scene-first product skeleton workflow for validating core experience before hardening.",
-      "triggers": ["prototype", "interactive", "skeleton", "0 to 1", "mvp"],
-      "actions": ["zero-to-one", "scene", "skeleton", "feedback"],
-      "references": ["references/interactive-prototype.md", "references/zero-to-one.md"],
+      "description": "Use-case-first artifact selection for skill, CLI, API, workflow, notebook, document, or UI MVPs.",
+      "triggers": ["mvp", "prototype", "use case", "skill", "cli", "api", "workflow", "artifact"],
+      "actions": ["zero-to-one", "clarify", "scene", "use-cases", "skeleton", "feedback"],
+      "references": ["references/mvp-artifacts.md", "references/zero-to-one.md"],
+      "status": "bundled"
+    },
+    {
+      "id": "ui-prototype",
+      "name": "UI Prototype",
+      "category": "workflow",
+      "description": "Interactive UI skeleton guidance for products whose core judgment depends on screens.",
+      "triggers": ["ui", "web app", "screen", "interactive ui", "visual prototype"],
+      "actions": ["skeleton", "feedback"],
+      "references": ["references/interactive-prototype.md"],
       "status": "bundled"
     },
     {
@@ -87,7 +87,7 @@
       "category": "adapter",
       "description": "Native Codex skill and AGENTS.md bridge for ProductForge workflows.",
       "triggers": ["codex", "agents.md", "openai", "skill install", "codex skill"],
-      "actions": ["zero-to-one", "iterate", "scene", "context", "brief", "contract", "tech-plan", "tasks", "review", "evidence", "learn"],
+      "actions": ["zero-to-one", "iterate", "clarify", "scene", "use-cases", "context", "brief", "contract", "tech-plan", "tasks", "review", "evidence", "learn"],
       "references": ["productforge/SKILL.md", "productforge/agents/openai.yaml", "adapters/codex/AGENTS.md", "references/cross-terminal.md"],
       "status": "bundled"
     }

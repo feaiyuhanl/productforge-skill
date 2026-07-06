@@ -11,7 +11,9 @@ Load only the referenced ProductForge files needed for the current action:
 
 - `zero-to-one`
 - `iterate`
+- `clarify`
 - `scene`
+- `use-cases`
 - `skeleton`
 - `feedback`
 - `context`
@@ -23,4 +25,4 @@ Load only the referenced ProductForge files needed for the current action:
 - `evidence`
 - `learn`
 
-Start new-product work from usage scenes, not feature lists. In existing projects, read code before planning. Keep increments, contracts, implementation, and evidence traceable by stable IDs.
+Start new-product work from usage scenes and use-case closure, not feature lists or default UI mockups. Choose the smallest MVP artifact before building a skeleton. In existing projects, read code before planning. Keep increments, contracts, implementation, and evidence traceable by stable IDs.

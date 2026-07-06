@@ -2,21 +2,21 @@
 
 ProductForge is an **Intent-to-Increment** product engineering skill.
 
-It is built for AI-assisted product work where humans own intent, judgment, taste, and tradeoffs, while AI turns ideas into small, verifiable product increments: prototypes, code changes, tests, reviews, evidence, and next-iteration briefs.
+It is built for AI-assisted product work where humans own intent, judgment, taste, and tradeoffs, while AI turns ideas into small, verifiable product increments: use cases, prototypes, code changes, tests, reviews, evidence, and next-iteration briefs.
 
 ## Core Idea
 
-Future product work should not start from long feature lists. It should start from usage scenes and move quickly toward something the user can judge.
+Future product work should not start from long feature lists or default UI mockups. It should start from usage scenes, close the core use cases, then choose the smallest artifact the user can judge.
 
 ProductForge uses this loop:
 
 ```text
-Intent -> Scene -> Skeleton / Plan -> Contract -> Code -> Evidence -> Learning
+Intent -> Scene -> Use Cases -> MVP Artifact -> Contract -> Code -> Evidence -> Learning
 ```
 
 The workflow has two primary paths:
 
-1. **0-to-1 product design**: define scenes, generate a minimal interactive skeleton, collect human feedback, then harden the product.
+1. **0-to-1 product design**: clarify intent, define scenes, close use cases, choose the MVP validation artifact, collect human feedback, then harden the product.
 2. **Continuous iteration**: maintain durable project context, write a short increment brief, read code, plan, implement, verify, review, and learn from data.
 
 ## Human / AI Division Of Labor
@@ -31,7 +31,7 @@ Humans own:
 
 AI owns:
 
-- Turning intent into concrete scenes and product skeletons.
+- Turning intent into concrete scenes, use cases, and product skeletons.
 - Producing code-aware implementation plans.
 - Implementing small increments.
 - Running tests and checks.
@@ -44,21 +44,23 @@ AI owns:
 Use this when starting from a product idea, tool concept, market observation, or rough intent.
 
 ```text
-scene -> skeleton -> feedback -> contract -> harden -> ship
+clarify -> scene -> use-cases -> skeleton -> feedback -> contract -> harden -> ship
 ```
 
-1. `scene`: define usage scenes instead of feature lists.
-2. `skeleton`: create the smallest interactive product backbone that can validate the core experience.
-3. `feedback`: let the human judge usefulness, clarity, trust, speed, and taste.
-4. `contract`: turn accepted behavior into SDD-style acceptance, UX, API, data, and quality contracts.
-5. `harden`: add supporting modules only after the core loop works.
-6. `ship`: implement, verify, review, and report evidence.
+1. `clarify`: define the intent boundary, product type, non-goals, and direction-changing unknowns.
+2. `scene`: define usage scenes instead of feature lists.
+3. `use-cases`: close the functional loop: input, action, output, success signal, and failure behavior.
+4. `skeleton`: choose and define the smallest MVP artifact, such as a skill, CLI, API, workflow, document, notebook, or UI.
+5. `feedback`: let the human judge usefulness, clarity, trust, speed, taste, and whether the loop closes.
+6. `contract`: turn accepted behavior into SDD-style acceptance, UX when relevant, API, data, and quality contracts.
+7. `harden`: add supporting modules only after the core loop works.
+8. `ship`: implement, verify, review, and report evidence.
 
 Example:
 
 ```text
 Use $productforge zero-to-one for a tool that helps Amazon sellers discover product opportunities.
-Start from usage scenes and generate the smallest interactive skeleton.
+Start from usage scenes, close the core use cases, then choose the smallest MVP artifact.
 ```
 
 ## Workflow 2: Existing Project Iteration
@@ -91,8 +93,10 @@ You can call any action directly:
 
 | Action | Purpose |
 | --- | --- |
+| `clarify` | Define the intent boundary and direction-changing questions |
 | `scene` | Create a scene brief from intent |
-| `skeleton` | Define a minimal interactive product skeleton |
+| `use-cases` | Close the core functional experience loop |
+| `skeleton` | Define the selected MVP validation skeleton |
 | `feedback` | Capture human experience feedback and tradeoffs |
 | `context` | Create or update durable project context |
 | `brief` | Write a short increment brief |
@@ -161,6 +165,7 @@ python productforge/scripts/productforge.py init-registry
 python productforge/scripts/productforge.py packs list --verbose
 python productforge/scripts/productforge.py templates
 python productforge/scripts/productforge.py scaffold --action scene --title "Amazon Opportunity Finder" --dry-run
+python productforge/scripts/productforge.py scaffold --action use-cases --title "Amazon Opportunity Finder" --dry-run
 python productforge/scripts/productforge.py scaffold --action brief --title "Improve onboarding conversion" --dry-run
 ```
 
@@ -177,6 +182,7 @@ productforge-skill/
       zero-to-one.md
       continuous-iteration.md
       project-context.md
+      mvp-artifacts.md
       interactive-prototype.md
       telemetry-and-learning.md
       review-gates.md
@@ -197,9 +203,8 @@ productforge-skill/
 ProductForge borrows workflow ideas from popular open-source AI product and coding systems, without vendoring their prompt bodies:
 
 - GitHub Spec Kit: specification-driven contracts, plans, tasks, and implementation.
-- BMAD Method: role-based product, architecture, UX, QA, and delivery thinking.
 - Context Engineering: context-rich execution packets and validation loops.
 - AGENTS.md: durable project-level agent instructions.
 - Codex, Cursor, Claude, and Copilot ecosystems: cross-terminal adapter patterns.
 
-ProductForge's opinionated addition is the **Intent-to-Increment** loop: start with scenes, validate experience through an interactive skeleton, then convert accepted behavior into contracts, implementation, evidence, and learning.
+ProductForge's opinionated addition is the **Intent-to-Increment** loop: start with scenes and use cases, choose the right MVP artifact, then convert accepted behavior into contracts, implementation, evidence, and learning. UI prototypes are supported when screens are the right validation artifact, but they are not the default constraint.

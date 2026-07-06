@@ -20,6 +20,7 @@ VALID_ACTIONS = {
     "zero-to-one",
     "iterate",
     "scene",
+    "use-cases",
     "skeleton",
     "feedback",
     "context",
